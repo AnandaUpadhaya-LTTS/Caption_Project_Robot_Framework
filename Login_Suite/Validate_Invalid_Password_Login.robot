@@ -16,10 +16,10 @@ Password_Validation_TC
 Verify InValid Credential Test
         [Arguments]     ${username}     ${password}     ${expected_password_error}
         Launch Browser
-        Click Element    xpath=//a[text()='Login/Register']
-        Click Element    id=login
-        Input Text    name=email    ${username}
-        Input Text    name=password    ${password}
-        Click Button    id=enterlogin
+        Click for UserName_Password Page Link
+        Click for Login Page
+        Enter Username    ${username}
+        Enter Password    ${password}
+        Click on Login
         Element Text Should Be    id=password__error        ${expected_password_error}
         Set Screenshot Directory    ${EXECDIR}${/}Screenshot

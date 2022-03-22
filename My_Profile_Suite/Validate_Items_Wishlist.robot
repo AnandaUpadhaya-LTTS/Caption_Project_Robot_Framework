@@ -2,17 +2,21 @@
 Documentation       This suite will handle all the test cases related to insertion of Items
 ...     in the Wish List. Test case 003
 Resource        ../Resource/Base/CommonFunctionality.resource
-
+Resource        ../Resource/Pages/Login_page.resource
 Test Teardown   Close Browser
+
+*** Variables ***
+${username}         cse20013@tezu.ac.in
+${password}         usy253qu
 
 *** Test Cases ***
 Verify Valid Credential Test
         Launch Browser
-        Click Element    xpath=//a[text()='Login/Register']
-        Click Element    id=login
-        Input Text    name=email    cse20013@tezu.ac.in
-        Input Text    name=password    usy253qu
-        Click Button    id=enterlogin
+        Click for UserName_Password Page Link
+        Click for Login Page
+        Enter Username    ${username}
+        Enter Password    ${password}
+        Click on Login
         Click Element    xpath=//a[text()="Modular Kitchen"]
         Click Element    xpath=//*[@id="plpPage"]/div[1]/div[4]/div/div[1]/ul/div[3]/div/div[1]/div/div[1]/div/div/div/div/div/div/div/img
         Click Element    xpath=//div[@id="wishlist"]
