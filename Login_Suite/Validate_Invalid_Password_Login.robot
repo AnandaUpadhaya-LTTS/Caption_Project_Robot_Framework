@@ -3,6 +3,7 @@ Documentation       This suite will handle all the test cases related to invalid
 ...     Login credential test. Test case 002
 Library     DataDriver      file=../Test_Data/Test_File.xlsx     sheet=Password_Validation
 Resource        ../Resource/Base/CommonFunctionality.resource
+Resource        ../Resource/Pages/Login_page.resource
 Test Teardown   Close Browser
 Test Template       Verify InValid Credential Test
 
