@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220321 12:02:31.205" rpa="false" schemaversion="2">
-<suite id="s1" name="Validate Valid Login Credential" source="D:\L&amp;T_Tech\Robot_Framework\Robot_Framework_Caption_Project\Login_Suite\Validate_Valid_Login_Credential.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220322 11:49:33.623" rpa="false" schemaversion="2">
+<suite id="s1" name="Validate Items Wishlist" source="D:\L&amp;T_Tech\Robot_Framework\Robot_Framework_Caption_Project\My_Profile_Suite\Validate_Items_Wishlist.robot">
 <test id="s1-t1" name="Verify Valid Credential Test">
 <kw name="Launch Browser" library="CommonFunctionality">
 <if>
@@ -9,129 +9,153 @@
 <arg>${driver_name}</arg>
 <arg>msedgedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<msg timestamp="20220321 12:02:31.587" level="INFO">${driver_name} = msedgedriver.exe</msg>
-<status status="PASS" starttime="20220321 12:02:31.585" endtime="20220321 12:02:31.587"/>
+<msg timestamp="20220322 11:49:33.977" level="INFO">${driver_name} = msedgedriver.exe</msg>
+<status status="PASS" starttime="20220322 11:49:33.976" endtime="20220322 11:49:33.977"/>
 </kw>
-<status status="PASS" starttime="20220321 12:02:31.585" endtime="20220321 12:02:31.587"/>
+<status status="PASS" starttime="20220322 11:49:33.975" endtime="20220322 11:49:33.977"/>
 </branch>
 <branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>geckodriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220321 12:02:31.589" endtime="20220321 12:02:31.589"/>
+<status status="NOT RUN" starttime="20220322 11:49:33.977" endtime="20220322 11:49:33.977"/>
 </kw>
-<status status="NOT RUN" starttime="20220321 12:02:31.587" endtime="20220321 12:02:31.589"/>
+<status status="NOT RUN" starttime="20220322 11:49:33.977" endtime="20220322 11:49:33.977"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>chromedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220321 12:02:31.589" endtime="20220321 12:02:31.589"/>
+<status status="NOT RUN" starttime="20220322 11:49:33.977" endtime="20220322 11:49:33.977"/>
 </kw>
-<status status="NOT RUN" starttime="20220321 12:02:31.589" endtime="20220321 12:02:31.589"/>
+<status status="NOT RUN" starttime="20220322 11:49:33.977" endtime="20220322 11:49:33.977"/>
 </branch>
-<status status="PASS" starttime="20220321 12:02:31.584" endtime="20220321 12:02:31.589"/>
+<status status="PASS" starttime="20220322 11:49:33.975" endtime="20220322 11:49:33.977"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${EXECDIR}${/}Driver${/}${driver_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220321 12:02:31.590" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
-<status status="PASS" starttime="20220321 12:02:31.589" endtime="20220321 12:02:33.362"/>
+<msg timestamp="20220322 11:49:33.978" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20220322 11:49:33.977" endtime="20220322 11:49:52.515"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220321 12:02:33.362" endtime="20220321 12:02:33.490"/>
+<status status="PASS" starttime="20220322 11:49:52.516" endtime="20220322 11:49:52.647"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220321 12:02:33.491" endtime="20220321 12:02:33.493"/>
+<status status="PASS" starttime="20220322 11:49:52.648" endtime="20220322 11:49:52.650"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${EXECDIR}${/}Screenshot</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220321 12:02:33.493" endtime="20220321 12:02:33.494"/>
+<status status="PASS" starttime="20220322 11:49:52.651" endtime="20220322 11:49:52.651"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220321 12:02:33.494" level="INFO">Opening url 'https://www.homelane.com/'</msg>
-<status status="PASS" starttime="20220321 12:02:33.494" endtime="20220321 12:02:39.861"/>
+<msg timestamp="20220322 11:49:52.652" level="INFO">Opening url 'https://www.homelane.com/'</msg>
+<status status="PASS" starttime="20220322 11:49:52.651" endtime="20220322 11:49:59.162"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220321 12:02:40.360" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/selenium-screenshot-52.png"&gt;&lt;img src="Screenshot/selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220321 12:02:39.861" endtime="20220321 12:02:40.360"/>
+<msg timestamp="20220322 11:50:00.651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/selenium-screenshot-120.png"&gt;&lt;img src="Screenshot/selenium-screenshot-120.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220322 11:49:59.162" endtime="20220322 11:50:00.651"/>
 </kw>
-<status status="PASS" starttime="20220321 12:02:31.584" endtime="20220321 12:02:40.360"/>
+<status status="PASS" starttime="20220322 11:49:33.975" endtime="20220322 11:50:00.651"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=//a[text()='Login/Register']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:40.362" level="INFO">Clicking element 'xpath=//a[text()='Login/Register']'.</msg>
-<status status="PASS" starttime="20220321 12:02:40.361" endtime="20220321 12:02:41.104"/>
+<msg timestamp="20220322 11:50:00.652" level="INFO">Clicking element 'xpath=//a[text()='Login/Register']'.</msg>
+<status status="PASS" starttime="20220322 11:50:00.651" endtime="20220322 11:50:15.321"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=login</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:41.106" level="INFO">Clicking element 'id=login'.</msg>
-<status status="PASS" starttime="20220321 12:02:41.105" endtime="20220321 12:02:41.707"/>
+<msg timestamp="20220322 11:50:15.324" level="INFO">Clicking element 'id=login'.</msg>
+<status status="PASS" starttime="20220322 11:50:15.323" endtime="20220322 11:50:16.423"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=email</arg>
 <arg>cse20013@tezu.ac.in</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:41.709" level="INFO">Typing text 'cse20013@tezu.ac.in' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20220321 12:02:41.708" endtime="20220321 12:02:41.917"/>
+<msg timestamp="20220322 11:50:16.425" level="INFO">Typing text 'cse20013@tezu.ac.in' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20220322 11:50:16.425" endtime="20220322 11:50:18.584"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=password</arg>
 <arg>usy253qu</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:41.919" level="INFO">Typing text 'usy253qu' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20220321 12:02:41.918" endtime="20220321 12:02:42.466"/>
+<msg timestamp="20220322 11:50:18.585" level="INFO">Typing text 'usy253qu' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20220322 11:50:18.585" endtime="20220322 11:50:18.775"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=enterlogin</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:42.467" level="INFO">Clicking button 'id=enterlogin'.</msg>
-<status status="PASS" starttime="20220321 12:02:42.467" endtime="20220321 12:02:42.813"/>
+<msg timestamp="20220322 11:50:18.776" level="INFO">Clicking button 'id=enterlogin'.</msg>
+<status status="PASS" starttime="20220322 11:50:18.776" endtime="20220322 11:50:18.880"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>Link=Customer Stories</arg>
+<arg>xpath=//a[text()="Modular Kitchen"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:42.814" level="INFO">Clicking element 'Link=Customer Stories'.</msg>
-<status status="PASS" starttime="20220321 12:02:42.813" endtime="20220321 12:02:45.054"/>
+<msg timestamp="20220322 11:50:18.881" level="INFO">Clicking element 'xpath=//a[text()="Modular Kitchen"]'.</msg>
+<status status="PASS" starttime="20220322 11:50:18.880" endtime="20220322 11:50:22.198"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[text()='Team']</arg>
+<arg>xpath=//*[@id="plpPage"]/div[1]/div[4]/div/div[1]/ul/div[3]/div/div[1]/div/div[1]/div/div/div/div/div/div/div/img</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220321 12:02:45.060" level="INFO">Clicking element 'xpath=//a[text()='Team']'.</msg>
-<status status="PASS" starttime="20220321 12:02:45.059" endtime="20220321 12:02:48.078"/>
+<msg timestamp="20220322 11:50:22.200" level="INFO">Clicking element 'xpath=//*[@id="plpPage"]/div[1]/div[4]/div/div[1]/ul/div[3]/div/div[1]/div/div[1]/div/div/div/div/div/div/div/img'.</msg>
+<status status="PASS" starttime="20220322 11:50:22.200" endtime="20220322 11:50:22.469"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@id="wishlist"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 11:50:22.471" level="INFO">Clicking element 'xpath=//div[@id="wishlist"]'.</msg>
+<status status="PASS" starttime="20220322 11:50:22.470" endtime="20220322 11:50:25.500"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class="c-close"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 11:50:25.501" level="INFO">Clicking element 'xpath=//div[@class="c-close"]'.</msg>
+<status status="PASS" starttime="20220322 11:50:25.500" endtime="20220322 11:50:25.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=fp-user</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 11:50:25.606" level="INFO">Clicking element 'id=fp-user'.</msg>
+<status status="PASS" starttime="20220322 11:50:25.605" endtime="20220322 11:50:25.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href='https://www.homelane.com/account/wishlist']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 11:50:25.719" level="INFO">Clicking element 'xpath=//a[@href='https://www.homelane.com/account/wishlist']'.</msg>
+<status status="PASS" starttime="20220322 11:50:25.718" endtime="20220322 11:50:28.861"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Design Gallery</arg>
+<arg>Purple Haze Straight Modular Kitchen</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220321 12:02:48.177" level="INFO">Current page contains text 'Design Gallery'.</msg>
-<status status="PASS" starttime="20220321 12:02:48.079" endtime="20220321 12:02:48.177"/>
+<msg timestamp="20220322 11:50:28.966" level="INFO">Current page contains text 'Purple Haze Straight Modular Kitchen'.</msg>
+<status status="PASS" starttime="20220322 11:50:28.863" endtime="20220322 11:50:28.966"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${EXECDIR}${/}Screenshot</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220321 12:02:48.178" endtime="20220321 12:02:48.179"/>
+<status status="PASS" starttime="20220322 11:50:28.967" endtime="20220322 11:50:28.968"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220321 12:02:48.179" endtime="20220321 12:02:50.498"/>
+<status status="PASS" starttime="20220322 11:50:28.968" endtime="20220322 11:50:33.275"/>
 </kw>
-<status status="PASS" starttime="20220321 12:02:31.583" endtime="20220321 12:02:50.499"/>
+<status status="PASS" starttime="20220322 11:49:33.974" endtime="20220322 11:50:33.277"/>
 </test>
-<doc>This suite will handle all the test cases related to valid login
-credential test. Test case 001</doc>
-<status status="PASS" starttime="20220321 12:02:31.207" endtime="20220321 12:02:50.508"/>
+<doc>This suite will handle all the test cases related to insertion of Items
+in the Wish List. Test case 003</doc>
+<status status="PASS" starttime="20220322 11:49:33.626" endtime="20220322 11:50:33.287"/>
 </suite>
 <statistics>
 <total>
@@ -140,7 +164,7 @@ credential test. Test case 001</doc>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Validate Valid Login Credential">Validate Valid Login Credential</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Validate Items Wishlist">Validate Items Wishlist</stat>
 </suite>
 </statistics>
 <errors>

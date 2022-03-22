@@ -23,4 +23,4 @@ Launch Browser
         set selenium implicit wait      30s
         Set Screenshot Directory    ${EXECDIR}${/}Screenshot
         Go To    url=${URL}
-        Capture Page Screenshot
+        SeleniumLibrary.Capture Page Screenshot
