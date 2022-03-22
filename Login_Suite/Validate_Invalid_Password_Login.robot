@@ -1,14 +1,15 @@
 *** Settings ***
 Documentation       This suite will handle all the test cases related to invalid
 ...     Login credential test. Test case 002
+Library     DataDriver      file=../Test_Data/Test_File.xlsx     sheet=Password_Validation
 Resource        ../Resource/Base/CommonFunctionality.resource
 Test Teardown   Close Browser
 Test Template       Verify InValid Credential Test
 
 *** Test Cases ***
-
-TC1     ananda@gmail.com        12345     Invalid password
-TC2     sunny@gmail.com       ${EMPTY}    Please enter your password
+Password_Validation_TC
+#TC1     ananda@gmail.com        12345     Invalid password
+#TC2     sunny@gmail.com       ${EMPTY}    Please enter your password
 
 *** Keywords ***
 Verify InValid Credential Test

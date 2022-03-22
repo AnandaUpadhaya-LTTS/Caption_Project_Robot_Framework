@@ -1,14 +1,15 @@
 *** Settings ***
 Documentation       This suite will handle all the test cases related to invalid
 ...     Login credential test. Test case 002
+Library     DataDriver      file=../Test_Data/Test_File_1.xlsx     sheet=Email_Validation
 Resource        ../Resource/Base/CommonFunctionality.resource
 Test Teardown   Close Browser
 Test Template       Verify InValid Credential Test
 
 *** Test Cases ***
-
-TC1     Peter@gmail      ${EMPTY}      Please enter a valid email address
-TC2     ${EMPTY}    tina123      Please enter your email
+Email_Validation_TC
+#TC1     Peter@gmail      ${EMPTY}      Please enter a valid email address
+#TC2     ${EMPTY}    tina123      Please enter your email
 
 
 *** Keywords ***
