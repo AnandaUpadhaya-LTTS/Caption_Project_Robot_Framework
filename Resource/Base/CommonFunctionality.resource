@@ -4,7 +4,7 @@ Documentation       This file handles browser configuration, reuseable scripts.
 Library     SeleniumLibrary
 
 *** Variables ***
-${BROWSER_NAME}     chrome
+${BROWSER_NAME}     edge
 ${URL}      https://www.homelane.com/
 
 *** Keywords ***
